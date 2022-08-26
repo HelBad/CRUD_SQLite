@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:background="@android:color/white">
+    <TextView
+        android:id="@+id/tvAddUpdateLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="Detail Karyawan"
+        android:background="@color/colorPrimary"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@android:color/white"
+        android:layout_below="@+id/tvAddUpdateLabel"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/namaAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Masukkan Nama"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:importantForAutofill="no"
+            tools:targetApi="o"/>
+
+        <EditText
+            android:id="@+id/alamatAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Masukkan Alamat"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etName"
+            android:importantForAutofill="no"
+            tools:targetApi="o"/>
+
+        <EditText
+            android:id="@+id/telpAdd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="Masukkan No. Telepon"
+            android:textSize="15dp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:maxLength="14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etOccupation"
+            android:importantForAutofill="no"
+            tools:targetApi="o"/>
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/img_add"
+            android:layout_gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/btnInsertData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:layout_marginHorizontal="15dp"
+            android:text="Insert"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnCancel"/>
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:layout_margin="15dp"
+            android:text="Cancel"
+            android:textColor="@android:color/white"
+            app:layout_constraintTop_toBottomOf="@+id/etEmail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnInsertData"
+            app:layout_constraintHorizontal_bias="0.5"/>
+    </LinearLayout>
+</RelativeLayout>
